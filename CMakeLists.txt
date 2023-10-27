@@ -1019,8 +1019,11 @@ else()
 endif()
 
 # Other external projects
-set(FMT_SYSTEM_HEADERS ON)
-add_subdirectory(other_projects/fmt)
+option(KTX_ENABLE_FMT "Use external fmt" OFF)
+if (KTX_ENABLE_FMT)
+  set(FMT_SYSTEM_HEADERS ON)
+  add_subdirectory(other_projects/fmt)
+endif()
 add_subdirectory(other_projects/cxxopts)
 
 # Tools
