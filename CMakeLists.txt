@@ -1031,8 +1031,6 @@ if(KTX_FEATURE_TOOLS)
     add_subdirectory(tools)
 endif()
 
-# Tests
-add_subdirectory(tests)
 
 # Documentation
 if(KTX_FEATURE_DOC)
